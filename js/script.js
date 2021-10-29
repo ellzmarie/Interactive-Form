@@ -4,11 +4,10 @@ window.onload = function () {
 };
 
 // The "Job Role" section
-const otherJobRole = document.getElementbyId('other-job-role');
+const otherJobRole = document.getElementById('other-job-role');
 otherJobRole.style.display = 'none';
 
 const jobTitle = document.getElementById('title');
 jobTitle.addEventListener('change', e => {
     (e.target.value === 'other')? otherJobRole.style.display = '' : otherJobRole.style.display = 'none';
 });
-
