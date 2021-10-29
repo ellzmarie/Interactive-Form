@@ -1,11 +1,14 @@
 // The "Name" field in focus 
 window.onload = function () {
-    document.getElementById("name").focus();
-}
+    document.getElementById('name').focus();
+};
 
 // The "Job Role" section
-// Hide the "text field" with the id of "other-job-role" so it is not displayed when the form first loads.
+const otherJobRole = document.getElementbyId('other-job-role');
+otherJobRole.style.display = 'none';
 
+const jobTitle = document.getElementById('title');
+jobTitle.addEventListener('change', e => {
+    (e.target.value === 'other')? otherJobRole.style.display = '' : otherJobRole.style.display = 'none';
+});
 
-// Program the "Job Role" <select> element to listen for user changes. 
-// When a change is detected, display/hide the "text field" based on the user’s selection in the drop down menu.
