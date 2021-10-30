@@ -13,3 +13,8 @@ jobTitle.addEventListener('change', e => {
 });
 
 // "T-Shirt Info" section
+const designTheme = document.getElementById('design');
+const colorTheme = document.getElementById('color');
+const colorThemeOption = colorTheme.children;
+colorTheme.disabled = true;
+
