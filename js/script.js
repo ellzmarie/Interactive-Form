@@ -1,4 +1,4 @@
-// The "Name" field in focus 
+// The "Name" field in focus section
 window.onload = function () {
     document.getElementById('name').focus();
 };
@@ -32,3 +32,10 @@ designTheme.addEventListener ('change', e=> {
         }
     }
 });
+
+// "Register for Activities" section
+const activitiesSelected = document.getElementById('activities-box');
+const totalAmount = document.getElementById('activities-cost');
+const allSelected = document.querySelectorAll('input[type="checkbox"]');
+let allCosts = 0;
+
