@@ -39,6 +39,27 @@ const totalAmount = document.getElementById('activities-cost');
 const allSelected = document.querySelectorAll('input[type="checkbox"]');
 let allCosts = 0;
 
-activitiesSelected.addEventListener('change', e=> {
-    const costSelected = partInt(e.target.getAttribute('data-cost'))
+activitiesSelected.addEventListener('change', e => {
+    const costSelected = parsetInt(e.target.getAttribute('data-cost'));
+    (e.target.checked)? allCosts += costSelected : allCosts -= costSelected;
+    totalAmount.textContent = `Total: $${allCosts}`;
+
+    const dayTime = e.target.getAttribute('data-day-and-time');
+    const isChecked = e.target.checked;
+
+    if (isChecked) {
+        for (let i=0; i < allSelected.length; i++) {
+            if (e.target !== allSelected[i] && dayTime === allSelected[i].getAttribute('data-day-and-time')) {
+                allSelected[i].disabled = true;
+                allSelected[i].parentElement.classList.add('disabled');
+            }
+        }
+    } else {
+        for (let i=0; i < allSelected.length; i++) {
+            if (dayTime === allSelected[i].getAttribute('data-day-and-time')) {
+                allSelected[i].disabled = false; 
+                allSelected[i].parentElement.classList.remove('disabled');
+            }
+        }
+    }
 });
