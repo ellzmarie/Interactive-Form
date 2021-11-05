@@ -39,3 +39,6 @@ const totalAmount = document.getElementById('activities-cost');
 const allSelected = document.querySelectorAll('input[type="checkbox"]');
 let allCosts = 0;
 
+activitiesSelected.addEventListener('change', e=> {
+    const costSelected = partInt(e.target.getAttribute('data-cost'))
+});
