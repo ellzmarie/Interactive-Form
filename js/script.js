@@ -63,3 +63,6 @@ activitiesSelected.addEventListener('change', e => {
         }
     }
 });
+
+// "Payment Info" section
+
