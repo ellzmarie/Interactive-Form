@@ -34,7 +34,8 @@ designTheme.addEventListener ('change', e=> {
 }); 
 
 // "Register for Activities" section
-const activitiesSelected = document.getElementById('activities-box');
+
+/* const activitiesSelected = document.getElementById('activities-box');
 const totalAmount = document.getElementById('activities-cost');
 const allSelected = document.querySelectorAll('input[type="checkbox"]');
 let allCosts = 0;
@@ -62,7 +63,10 @@ activitiesSelected.addEventListener('change', e => {
             }
         }
     }
-});
+}); */
 
 // "Payment Info" section
 
+// Form validation
+
+// Accessibility
