@@ -24,14 +24,14 @@ designTheme.addEventListener ('change', e=> {
         const selectTheme = e.target.value;
         const themeOption = colorThemeOption[i].getAttribute('data-theme');
         if (selectTheme === themeOption) {
-            colorOption[i].hidden = false;
-            colorOption[i].setAttribute('selected', true);
+            colorThemeOption[i].hidden = false;
+            colorThemeOption[i].setAttribute('selected', true);
         } else {
-            colorOption[i].hidden = true;
-            colorOption[i].removeAttribute('selected');
+            colorThemeOption[i].hidden = true;
+            colorThemeOption[i].removeAttribute('selected');
         }
     }
-});
+}); 
 
 // "Register for Activities" section
 const activitiesSelected = document.getElementById('activities-box');
