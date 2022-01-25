@@ -35,15 +35,15 @@ designTheme.addEventListener ('change', e=> {
 
 // "Register for Activities" section
 
-/* const activitiesSelected = document.getElementById('activities-box');
-const totalAmount = document.getElementById('activities-cost');
+const activitiesSelected = document.getElementById('activities-box');
+const activitiesAmount = document.getElementById('activities-cost');
 const allSelected = document.querySelectorAll('input[type="checkbox"]');
 let allCosts = 0;
 
 activitiesSelected.addEventListener('change', e => {
-    const costSelected = parsetInt(e.target.getAttribute('data-cost'));
+    const costSelected = parseInt(e.target.getAttribute('data-cost'));
     (e.target.checked)? allCosts += costSelected : allCosts -= costSelected;
-    totalAmount.textContent = `Total: $${allCosts}`;
+    activitiesAmount.textContent = `Total: $${allCosts}`;
 
     const dayTime = e.target.getAttribute('data-day-and-time');
     const isChecked = e.target.checked;
@@ -63,7 +63,7 @@ activitiesSelected.addEventListener('change', e => {
             }
         }
     }
-}); */
+}); 
 
 // "Payment Info" section
 
