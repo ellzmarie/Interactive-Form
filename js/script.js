@@ -69,6 +69,15 @@ activitiesSelected.addEventListener('change', e => {
 const paymentMethods = document.getElementById('payment');
 paymentMethods.children[1].setAttribute('selected', true);
 
+const creditCard = document.getElementById('credit-card');
+creditCard.style.display = '';
+
+const bitcoin = document.getElementById('bitcoin');
+bitcoin.style.display = 'none';
+
+const paypal = document.getElementById('paypal');
+paypal.style.display = 'none';
+
 
 // Form validation
 
