@@ -66,6 +66,9 @@ activitiesSelected.addEventListener('change', e => {
 }); 
 
 // "Payment Info" section
+const paymentMethods = document.getElementById('payment');
+
+
 
 // Form validation
 
