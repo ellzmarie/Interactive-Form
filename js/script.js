@@ -67,7 +67,7 @@ activitiesSelected.addEventListener('change', e => {
 
 // "Payment Info" section
 const paymentMethods = document.getElementById('payment');
-
+paymentMethods.children[1].setAttribute('selected', true);
 
 
 // Form validation
