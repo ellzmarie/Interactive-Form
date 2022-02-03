@@ -79,8 +79,24 @@ const paypal = document.getElementById('paypal');
 paypal.style.display = 'none';
 
 paymentMethods.addEventListener ('change', e => {
-    paymentMethods.disabled = false;
-    (e.target.value === 'bitcoin')? bitcoin.style.display = 'bitcoin' : creditCard.style.display = '';
+    const selectPaymentMethod = e.target.value;
+    switch (selectPaymentMethod) {
+        case 'paypal':
+            paypal.style.display = '';
+            bitcoin.style.display = 'none';
+            creditCard.style.display = 'none';
+            break;
+        case 'bitcoin':
+            bitcoin.style.display = '';
+            creditCard.style.display = 'none';
+            paypal.style.display = 'none';
+            break;
+        case 'creditCard':
+            creditCard.style.display = '';
+            paypal.style.display = 'none';
+            bitcoin.style.display = 'none';
+            break;
+    }
 }) 
 
 // Form validation
