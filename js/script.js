@@ -80,9 +80,8 @@ paypal.style.display = 'none';
 
 paymentMethods.addEventListener ('change', e => {
     paymentMethods.disabled = false;
-    for (e.target.value === 'bitcoin')? bitcoin.style.display = 'bitcoin' : creditCard.style.display = '';
-})
-
+    (e.target.value === 'bitcoin')? bitcoin.style.display = 'bitcoin' : creditCard.style.display = '';
+}) 
 
 // Form validation
 
