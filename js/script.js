@@ -78,6 +78,10 @@ bitcoin.style.display = 'none';
 const paypal = document.getElementById('paypal');
 paypal.style.display = 'none';
 
+paymentMethods.addEventListener ('change', e => {
+    
+})
+
 
 // Form validation
 
