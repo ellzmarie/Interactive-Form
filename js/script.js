@@ -126,6 +126,6 @@ function nameValidCheck() {
     return validCheck;
 }
 
-nameValid.addEventListener ('keyup', checkNameValid);
+nameValid.addEventListener ('keyup', nameValidCheck);
 
 // Accessibility
