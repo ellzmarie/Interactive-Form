@@ -97,8 +97,20 @@ paymentMethods.addEventListener ('change', e => {
             bitcoin.style.display = 'none';
             break;
     }
-}) 
-
+}); 
 // Form validation
+const form = document.querySelector("form");
+const name = document.getElementById("name");
+const email = document.getElementById("email");
+const ccNumber = document.getElementById("cc-num");
+const zip = document.getElementById("zip");
+const cvv = document.getElementById("cvv");
+
+// Validating name field
+
+<p>
+<label for="name">"Name: *"</label>
+<input type="text" id="name" name="user-name">
+</p>
 
 // Accessibility
