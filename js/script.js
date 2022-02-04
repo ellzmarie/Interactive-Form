@@ -99,6 +99,7 @@ paymentMethods.addEventListener ('change', e => {
     }
 }); 
 // Form validation
+// Form inputs
 const form = document.querySelector("form");
 const nameValid = document.getElementById("name");
 const email = document.getElementById("email");
@@ -119,8 +120,7 @@ function noRequiredHint (element) {
     element.parentElement.lastElementChild.style.display = "none";
 
 // Validating name field
-
-function checkNameValid() {
+function nameValidCheck() {
     const validCheck = /^\s*$/.test(nameValid.value);
     (!validCheck)? noRequiredHint(nameValid) : requiredHint(nameValid);
     return validCheck;
