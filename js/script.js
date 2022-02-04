@@ -34,7 +34,6 @@ designTheme.addEventListener ('change', e=> {
 }); 
 
 // "Register for Activities" section
-
 const activitiesSelected = document.getElementById('activities-box');
 const activitiesAmount = document.getElementById('activities-cost');
 const allSelected = document.querySelectorAll('input[type="checkbox"]');
@@ -98,6 +97,7 @@ paymentMethods.addEventListener ('change', e => {
             break;
     }
 }); 
+
 // Form validation
 // Form inputs
 const form = document.querySelector("form");
@@ -112,20 +112,39 @@ function requiredHint (element) {
     element.parentElement.classList.add('not-valid');
     element.parentElement.classList.remove('valid');
     element.parentElement.lastElementChild.style.display = 'block';
-}
+};
 
 function noRequiredHint (element) {
     element.parentElement.classList.add('valid');
     element.parentElement.classList.remove('not-valid');
     element.parentElement.lastElementChild.style.display = "none";
-
+};
 // Validating name field
-function nameValidCheck() {
+function isValidName() {
     const validCheck = /^\s*$/.test(nameValid.value);
     (!validCheck)? noRequiredHint(nameValid) : requiredHint(nameValid);
     return validCheck;
-}
+};
 
-nameValid.addEventListener ('keyup', nameValidCheck);
+nameValid.addEventListener ('keyup', isValidName);
 
-// Accessibility
+// Validate email field
+function isEmailValid() {
+    const isEmpty = /^\s*$/.test(email.value);
+    const isValid = /^[^@]+\@[^@.]+\.com$/i.test(email.value);
+
+    if (isEmpty) {
+        requiredHint(email);
+        email.parentElement.lastElementChild.innerHTML = 'Email field cannot be blank';
+        return false;
+    } else if (!isValid) {
+        requiredHint(email);
+        email.parentElement.lastElementChild.innerHTML = 'Email address must contain @ sign and end with ".com"';
+        return false;
+    } else {
+        noRequiredHint(email);
+        return true;
+    }
+};
+
+
