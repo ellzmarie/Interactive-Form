@@ -147,4 +147,19 @@ function isEmailValid() {
     }
 };
 
+// The "Register for Activities" section must have at least one activity selected
+
+function isActivitySelected() {
+    const valid = allSelected > 0;
+    (valid)? noRequiredHint(activitiesSelected) : requiredHint(activitiesSelected);
+    return valid; 
+};
+
+// The "Card number" field must contain a 13 - 16 digit credit card number with no dashes or spaces. The value does not need to be a real credit card number.
+
+
+// The "Zip code" field must contain a 5 digit number.
+
+
+// The "CVV" field must contain a 3 digit number.
 
