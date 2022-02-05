@@ -164,6 +164,27 @@ function isCvvValid() {
     return valid; 
 };
 
+// Validate form
+form.addEventListener('submit', e => {
+    if (isValidName()) {
+        e.preventDefault();
+    }
+    if (!isEmailValid()) {
+        e.preventDefault();
+    }
+    if (!isActivitySelected()) {
+        e.preventDefault();
+    }
+    if (creditCard.style.display === '' && !isCreditCardValid()) {
+        e.preventDefault();
+    }
+    if (creditCard.style.display === '' && !isZipValid()) {
+        e.preventDefault();
+    }
+    if (creditCard.style.display === '' && !isCvvValid()) {
+        e.preventDefault();
+    }
+});
 
 // hint validation
 function requiredHint (element) {
