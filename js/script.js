@@ -107,18 +107,6 @@ const ccNumber = document.getElementById("cc-num");
 const zip = document.getElementById("zip");
 const cvv = document.getElementById("cvv");
 
-// hint validation
-function requiredHint (element) {
-    element.parentElement.classList.add('not-valid');
-    element.parentElement.classList.remove('valid');
-    element.parentElement.lastElementChild.style.display = 'block';
-};
-
-function noRequiredHint (element) {
-    element.parentElement.classList.add('valid');
-    element.parentElement.classList.remove('not-valid');
-    element.parentElement.lastElementChild.style.display = "none";
-};
 // Validating name field
 function isValidName() {
     const validCheck = /^\s*$/.test(nameValid.value);
@@ -177,3 +165,15 @@ function isCvvValid() {
 };
 
 
+// hint validation
+function requiredHint (element) {
+    element.parentElement.classList.add('not-valid');
+    element.parentElement.classList.remove('valid');
+    element.parentElement.lastElementChild.style.display = 'block';
+};
+
+function noRequiredHint (element) {
+    element.parentElement.classList.add('valid');
+    element.parentElement.classList.remove('not-valid');
+    element.parentElement.lastElementChild.style.display = "none";
+};
