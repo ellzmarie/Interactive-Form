@@ -138,7 +138,7 @@ function isEmailValid() {
 // The "Register for Activities" section must have at least one activity selected
 
 function isActivitySelected() {
-    const valid = allSelected > 0;
+    const valid = allCost > 0;
     (valid)? noRequiredHint(activitiesSelected) : requiredHint(activitiesSelected);
     return valid; 
 };
