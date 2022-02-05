@@ -156,10 +156,24 @@ function isActivitySelected() {
 };
 
 // The "Card number" field must contain a 13 - 16 digit credit card number with no dashes or spaces. The value does not need to be a real credit card number.
-
+function isCreditCardValid() {
+    const valid = /^(d{13,16})$/.test(ccNumber.value);
+    (valid)? noRequiredHint(ccNumber) : requiredHint(ccNumber);
+    return valid; 
+};
 
 // The "Zip code" field must contain a 5 digit number.
-
+function isZipValid() {
+    const valid = /^(\d{5})$/.test(zip.value);
+    (valid)? noRequiredHint(zip) : requiredHint(zip);
+    return valid; 
+};
 
 // The "CVV" field must contain a 3 digit number.
+function isCvvValid() {
+    const valid = /^(\d{3})$/.test(cvv.value);
+    (valid)? noRequiredHint(cvv) : requiredHint(cvv);
+    return valid; 
+};
+
 
