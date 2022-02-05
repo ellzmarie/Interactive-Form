@@ -186,7 +186,13 @@ form.addEventListener('submit', e => {
     }
 });
 
-// hint validation
+// Accessibility 
+for (let i=0; i < inputAll.length; i++) {
+    inputAll[i].addEventListener('focus', e => {e.target.parentElement.classList.add('focus')});
+    inputAll[i].addEventListener('blur', e => {e.target.parentElement.classList.remove('focus')});
+}
+
+// Hint validation
 function requiredHint (element) {
     element.parentElement.classList.add('not-valid');
     element.parentElement.classList.remove('valid');
