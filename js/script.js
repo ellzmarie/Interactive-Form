@@ -145,7 +145,7 @@ function isActivitySelected() {
 
 // The "Card number" field must contain a 13 - 16 digit credit card number with no dashes or spaces. The value does not need to be a real credit card number.
 function isCreditCardValid() {
-    const valid = /^(d{13,16})$/.test(ccNumber.value);
+    const valid = /^(\d{13,16})$/.test(ccNumber.value);
     (valid)? noRequiredHint(ccNumber) : requiredHint(ccNumber);
     return valid; 
 };
