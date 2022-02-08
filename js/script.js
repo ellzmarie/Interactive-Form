@@ -189,9 +189,9 @@ form.addEventListener('submit', e => {
 });
 
 // Accessibility 
-for (let i=0; i < inputAll.length; i++) {
-    inputAll[i].addEventListener('focus', e => {e.target.parentElement.classList.add('focus')});
-    inputAll[i].addEventListener('blur', e => {e.target.parentElement.classList.remove('focus')});
+for (let i=0; i < allSelected.length; i++) {
+    allSelected[i].addEventListener('focus', e => {e.target.parentElement.classList.add('focus')});
+    allSelected[i].addEventListener('blur', e => {e.target.parentElement.classList.remove('focus')});
 }
 
 // Hint validation
