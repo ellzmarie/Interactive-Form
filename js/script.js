@@ -96,7 +96,9 @@ paymentMethods.addEventListener ('change', e => {
             bitcoin.style.display = 'none';
             break;
         default:
-            creditCard.style.display = '';    
+            creditCard.style.display = '';
+            paypal.style.display = 'none';
+            bitcoin.style.display = 'none';    
     }
 }); 
 
